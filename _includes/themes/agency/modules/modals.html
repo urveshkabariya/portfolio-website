@@ -1,0 +1,58 @@
+ <!-- Portfolio Modals -->
+ {% for portfolio in site.data.portfolios %}
+    <div class="portfolio-modal modal fade" id="portfolioModal{{ portfolio.id }}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="modal-body">
+                            <h3>
+                              {{ portfolio.title }}
+                              {% if portfolio.link %}
+                                &nbsp;&nbsp;
+                                <a href="{{portfolio.link}}" target="_blank"><i class="fa fa-external-link"></i></a>
+                              {% endif %}
+                            </h3>
+                            <hr class="star-primary">
+                            <div class="row">
+                              {% if portfolio.img %}
+                                <div class="col-lg-8">
+                                  <img src="{{ ASSET_PATH }}/img/portfolio/{{ portfolio.img }}" class="img-responsive img-centered" alt="{{ portfolio.alt }}">
+                                </div>
+                              {% endif %}
+                              {% if portfolio.video %}
+                                <div class="col-lg-8">
+                                  <div class="video-container">
+                                    <iframe src="{{portfolio.video}}" frameborder="0" allowfullscreen></iframe>
+                                  </div>
+                                </div>
+                              {% endif %}
+                              <div class="{% if portfolio.img or portfolio.video %}col-lg-4{% else %}col-lg-12{% endif %}">
+                                <p>{{ portfolio.description }}</p>
+                                <ul class="list-inline item-details">
+                                  {% if portfolio.client %}
+                                    <li><strong>Achievement:</strong> {{ portfolio.client }}</li>
+                                  {% endif %}
+                                  {% if portfolio.project-date %}
+                                    <li><strong>Date:</strong> {{ portfolio.project-date }}</li>
+                                  {% endif %}
+                                  {% if portfolio.category %}
+                                    <li><strong>Technology:</strong> {{ portfolio.category }}</li>
+                                  {% endif %}
+                                </ul>
+                              </div>
+                            </div>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
