@@ -22,15 +22,18 @@
                     <li>
                         <a class="page-scroll" href="{% if page.path != "index.md" %}{{ HOME_PATH }}{% endif %}#about">About</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a class="page-scroll" href="{% if page.path != "index.md" %}{{ HOME_PATH }}{% endif %}#skills">Skills</a>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                         <a class="page-scroll" href="{% if page.path != "index.md" %}{{ HOME_PATH }}{% endif %}#portfolio">Portfolio</a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a class="page-scroll" href="{% if page.path == "index.md" %}#blog{% else %}{{ HOME_PATH }}blog/{% endif %}">Blog</a>
+                        <a class="page-scroll" href="{% if page.path != "index.md" %}{{ HOME_PATH }}{% endif %}#gallery">Gallery</a>
                     </li>
+                    <!-- <li>
+                        <a class="page-scroll" href="{% if page.path == "index.md" %}#blog{% else %}{{ HOME_PATH }}blog/{% endif %}">Blog</a>
+                    </li> -->
                     <li>
                         <a class="page-scroll" href="{% if page.path != "index.md" %}{{ HOME_PATH }}{% endif %}#contact">Contact</a>
                     </li>

@@ -53,4 +53,9 @@ $(document).ready(function($) {
       $(currentModal).modal('hide');
     }
   })
+
+  $("#urk-unite-gallery").unitegallery({
+      gallery_theme: "carousel",
+      tile_height:100
+  });
 });
