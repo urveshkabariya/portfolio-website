@@ -609,7 +609,7 @@ p.history:last-child {
     }
 
     .timeline>li {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
         min-height: 100px;
     }
 
